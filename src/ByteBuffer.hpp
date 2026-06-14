@@ -127,6 +127,10 @@ public:
         return wpos;
     }
 
+    const uint8_t* getData() const {
+        return buf.data();
+    }
+
     // Utility Functions
 #ifdef BB_UTILITY
     void setName(std::string_view n);
