@@ -248,8 +248,12 @@ void ByteBuffer::put(const ByteBuffer* src) {
         append<uint8_t>(src->get(i));
 }
 
-void ByteBuffer::put(uint8_t b) {
+void ByteBuffer::putU(uint8_t b) {
     append<uint8_t>(b);
+}
+
+void ByteBuffer::put(int8_t b) {
+    append<int8_t>(b);
 }
 
 void ByteBuffer::put(uint8_t b, uint32_t index) {
@@ -295,8 +299,12 @@ void ByteBuffer::putFloat(float value, uint32_t index) {
     insert<float>(value, index);
 }
 
-void ByteBuffer::putInt(uint32_t value) {
+void ByteBuffer::putUInt(uint32_t value) {
     append<uint32_t>(value);
+}
+
+void ByteBuffer::putInt(int32_t value) {
+    append<int32_t>(value);
 }
 
 void ByteBuffer::putInt(uint32_t value, uint32_t index) {
